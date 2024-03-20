@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+void shellsort(int a[],int size);
+void main()
+{
+	int i,size,a[10];
+	printf("\n Enter a size of elements :: ");
+	scanf("%d",&size);
+	for(i=0; i<size; i++)
+	{
+		printf("\n Enter a element : ");
+		scanf("%d",&a[i]);
+		
+	}
+	shellsort(a,size);
+	printf(" \n The sorted elements are :: ");
+	for(i=0; i<size; i++)
+	{
+		printf("\n %d",a[i]);
+		
+	}
+}
+void shellsort(int a[],int size)
+{
+	int i,j,gap,tmp;
+	for(gap=size/2; gap>0; gap=gap/2)
+	{
+		for(i=gap; i<size; i++)
+		{
+			tmp=a[i];
+			for(j=i; j>=gap; j=j-gap)
+			{
+				if(a[j-gap]>tmp)
+					a[j]= a[j-gap];
+					else
+					break;
+			}
+			a[j]=tmp;
+		}
+	}
+}
