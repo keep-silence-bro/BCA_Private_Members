@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
+
+struct Node* newNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    node->data = data;
+    node->left = node->right = NULL;
+    return node;
+}
+
+int countLeafNodes(struct Node* node) {
+    if (node == NULL)
+        return 0;
+    if (node->left == NULL && node->right == NULL)
+        return 1;
+    else
+        return countLeafNodes(node->left) + countLeafNodes(node->right);
+}
+
+int countNonLeafNodes(struct Node* node) {
+    if (node == NULL)
+        return 0;
+    if (node->left != NULL || node->right != NULL)
+        return 1 + countNonLeafNodes(node->left) + countNonLeafNodes(node->right);
+    else
+        return 0;
+}
+
+int main() {
+    struct Node* root = newNode(10);
+    root->left = newNode(21);
+    root->right = newNode(33);
+    root->left->left = newNode(48);
+    root->left->right = newNode(51);
+
+    printf("Count of leaf nodes: %d\n", countLeafNodes(root));
+    printf("Count of non-leaf nodes: %d\n", countNonLeafNodes(root));
+
+    return 0;
+}
