@@ -1,0 +1,58 @@
+---------------customers-----------------
+create table customers
+(
+cnum int,
+cname varchar(20),
+city varchar(30),
+rating int,
+snum int
+);
+insert into customers values
+(2001,'allen','baroda',100 ,1001),
+(2002,'alice','pune',200,1003),
+(2003,' john','Mumbai',200,1002),
+( 2004,'sam','delhi',300,1002),
+(2006,'harry','surat',100,1001),
+(2008,'tom','delhi',300,1007),
+(2007,'goerge','mumbai',100,1004);
+
+
+
+---------------Orders--------------
+create table orders
+(
+onum int,
+amount int,
+odate date,
+cnum int,
+snum int
+);
+insert into orders values
+(3001,18,'2019-3-10',2008,1007),
+(3003,767,'2019-3-15',2001,1001),
+(3002,1900,'2019-3-10',2007,1004),
+(3005,5160,'2019-4-10',2003,1002),
+(3006,1098,'2019-4-20',2008,1007),
+(3007,1713,'2019-5-10',2002,1003),
+(3008,75,'2019-5-10',2004,1002);
+
+
+
+------------salesmane---------------
+create table salesman
+(
+snum int,
+sname varchar(30),
+city varchar(20),
+commission int
+);
+insert into salesman values
+(1001,'zaid','mumbai',12),
+ (1002,'zaki',   'surat',13), 
+(1003,'ayan','pune',10), 
+(1004,'shaikh','mumbai',11), 
+(1005,'junaid','baroda',14) 
+(1007,'abdul','delhi',15);
+
+
+

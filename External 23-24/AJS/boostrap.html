@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<script src="F:\ZAID\angular.min.js" ></script>
+	<body ng-app="myApp">
+		<div ng-controller="myctrl">
+			{{ greeting }}
+		</div>
+		<script>
+			var app=angular.module('myApp',[]);
+			app.controller('myctrl', function($scope){
+				$scope.greeting="Welcome";
+				
+			});
+			angular.bootstrap(element,['my']);
+		</script>
+	</body>
+	</html>
