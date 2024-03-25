@@ -1,0 +1,5 @@
+insert into store values
+(02,'Alice','deccan road','delhi',150,'2012-02-16',220000),
+(03,'Sam','hadapsar','pune',200,'2013-03-20',250000),
+(04,'Zaid','Goregoan east','mumbai',300,'2014-04-27',189000),
+(05,'Shaikh','near charminar','hydrabad',350,'2016-03-01',189000);
