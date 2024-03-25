@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+AngularJs with Multiple Controllers Example
+</title>
+<script src="F:\ZAID\angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module('angularctrlapp', []);
+app.controller('angularctrl1', function ($scope) {
+$scope.fname1 = "Welcome to";
+$scope.lname1 = "Tutlane";
+$scope.getname1 = function () {
+return $scope.fname1 +" "+ $scope.lname1;
+};
+});
+app.controller('angularctrl2', function ($scope) {
+$scope.fname2 = "Allen";
+$scope.lname2 = "Deo";
+$scope.getname2 = function () {
+return $scope.fname2 +" "+$scope.lname2;
+};
+});
+</script>
+</head>
+<body ng-app="angularctrlapp">
+<h2>AngularJS Multiple Controllers Example</h2>
+<b>First Controller</b><br /><br />
+<div ng-controller="angularctrl1">
+First Name: {{fname1}}<br />
+Last Name:  {{lname1}}<br />
+Full Name: <b>{{getname1()}}</b>
+</div><br />
+<b>Second Controller</b><br /><br />
+<div ng-controller="angularctrl2">
+First Name: {{fname2}}<br />
+Last Name:  {{lname2}}<br />
+Full Name: <b>{{getname2()}}</b>
+</div>
+</body>
+</html>
