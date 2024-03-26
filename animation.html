@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AngularJS Animations Example with transition</title>
+<script src="F:\ZAID\Programs Files\Angular js\angular.min.js"></script>
+<script src="F:\ZAID\Programs Files\Angular js\animate.js"></script>
+<script>
+	var app = angular.module("angularapp",["ngAnimate"]);
+</script>
+<style>
+div{
+		transition: all linear 0.5s;
+		background-color: #08c;
+		width: 30%;
+		padding:30px;
+		border:1px solid black;
+	}
+	.ng-hide {
+		opacity:0;
+	}
+</style>
+</head>
+<body ng-app="angularapp">
+<h2>AngularJS Animations Example</h2>
+<input type="checkbox" ng-model="chkselct"><br /><br />
+<div ng-hide='chkselct' style="clear:both;">Hi Welcome to Angularjs... Hello World</div>
+</body>
+</html>
