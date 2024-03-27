@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Example 1</title> 
+	<script src= "F:\AJS\angular.min.js"></script> 
+</head> 
+<body ng-app="myApp"> 
+	<div ng-controller="BCA"> 
+		{{ str1 }}
+	</div>
+	<div ng-controller="MCA"> 
+		{{ str2 }}
+	</div> 
+ 
+
+	<script> 
+		var app = angular.module("myApp", []); 
+		app.controller("BCA", function ($scope) { 
+			$scope.str1 = "This is BCA class"; 
+		}); 
+		app.controller("MCA", function ($scope) { 
+			$scope.str2 = "This is MCA class"; 
+		}); 
+	</script> 
+</body> 
+
+</html>

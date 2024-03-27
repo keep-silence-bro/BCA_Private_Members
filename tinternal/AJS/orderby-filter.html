@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<script src="F:\AJS\angular.min.js"></script>
+<body ng-app>
+<p ng-init="fruit=[{name:'apple',color:'red'},{name:'grapes',color:'green'}]">
+  <p ng-repeat="x in fruit | orderBy:'color'">
+    fruit is={{x.name}}<br>
+    color is={{x.color}}
+  </p>
+</p>
+</body>
+</html>

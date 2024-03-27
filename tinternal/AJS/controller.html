@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Example 1</title> 
+	<script src= "F:\AJS\angular.min.js"></script> 
+</head> 
+<body ng-app="myApp"> 
+	<div ng-controller="myCtrl"> 
+		<h1>{{title}}</h1> 
+	</div> 
+
+	<script type="text/javascript"> 
+		var app = angular.module("myApp", []); 
+		app.controller("myCtrl", function ($scope) { 
+			$scope.title = "AngularJS Controller"; 
+		}); 
+	</script> 
+</body> 
+
+</html>

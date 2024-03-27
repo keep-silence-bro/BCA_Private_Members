@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="F:\AJS\angular.min.js"></script>
+<body ng-app>
+My favorite color is:
+<select ng-model="choice">
+  <option value="green">Green
+  <option value="red">red
+  <option value="blue">blue
+</select>
+<div ng-switch="choice">
+  <div ng-switch-when="green">
+     <p>green color is selected</p>
+  </div>
+  <div ng-switch-when="red">
+     <p>red color is selected</p>
+  </div>
+   <div ng-switch-when="blue">
+     <p>blue color is selected</p>
+  </div>
+   <div ng-switch-default>
+     <p>white color is selected</p>
+  </div>
+</div>
+</body>
+</html>

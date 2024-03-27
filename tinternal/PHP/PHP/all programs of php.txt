@@ -1,0 +1,107 @@
+<?php
+echo <a href="f.html"?uname=admin&password=admin&mobile=123456789>visit to next</a>
+?>
+<?php
+$a=$_GET["unamr"];
+$b=$_GET["password"];
+$c=$_GET["mobile"];
+?>
+two.php
+<?php
+$a=$_GET["text1"];
+$b=$a*$a;
+echo "square is =".$b;
+?>
+fout.php
+<?php
+$a=$_POST["text1"];
+$b=$a*$a;
+echo "square is =".$b;
+?>
+
+six.php
+<?php
+$a=$_REQUEST["text1"];
+$b=$a*$a;
+echo "square is =".$b;
+?>
+
+
+<html>
+<body bgcolor="yellow">
+	<?php
+		echo "hello bca2";
+	?>
+</body>
+</html>
+
+
+demo.php
+<?php
+$a=$_GET["text2"];
+echo $a;
+?>
+
+<?php
+header("Location:b.php");
+echo "hello bca2";
+?>
+
+b.php
+<?php
+echo "<b>hello bca2";
+?>
+
+nex.php
+<?php
+$a=$_GET["text1"];
+$b=$_GET["text1"];
+ifstrcmp($a,"admin")&&strcmp($b,"admin")
+{
+header("Location:home.php");
+}
+else
+{
+header("Location:login.php")
+}
+
+home.php
+<?php
+echo "hello world";
+?>
+
+<?php
+$a=20;
+$b=30;
+function add()
+{
+$GLOBALS["z"]=$GLOBALS["x"]+$GLOBALS["y"];
+}
+add();
+echo $z;
+?>
+
+<?php
+echo $_SERVER["PHP_SELE"];
+?>
+
+<?php
+$con=mysqli_connect("localhost","root","","bca2");
+mysqli_query($con,"inter into stud value(1,'abc',3000)");
+mysqli_close($con);
+?>
+
+<?php
+$c=0;
+$con=mysqli_connect("","","","");
+$rs=mysqli_query($con,"select *from stud");
+while($a=mysqli_fetch_array($rs))
+{
+echo $a[0]."  ".$a[1]."".$a[2]."<br>";
+$c=$c+1;
+}
+echo $c;
+mysqli_close($con);
+?>
+
+

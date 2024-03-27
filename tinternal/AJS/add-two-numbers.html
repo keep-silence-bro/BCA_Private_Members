@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<script src="F:\AJS\angular.min.js"></script>
+<body>
+
+<div ng-app>
+  <h3>Enter no</h3>
+  <input type="number" ng-model="a">
+  <h3>Enter no 2</h3>
+  <input type="number" ng-model="b" ng-blur="c=a+b"><br>
+  {{ c }}
+  <input type="submit"ng-click="c=a+b">
+</div>
+</body>
+</html>
