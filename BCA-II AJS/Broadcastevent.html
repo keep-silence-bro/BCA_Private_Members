@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>$Broadcast in AngularJs</title>
+
+<script src="D:\angular.min.js"></script>
+
+</script>
+</head>
+
+<body>
+    <center>
+<div ng-app="myApp">
+<div ng-controller="mycontroler1"> 
+    <input type="submit" value="broadcast"ng-click="a($event)">
+    {{ msg }}
+    <div ng-controller="mycontroler2">
+        {{ msg }}
+    </div>
+</div>
+</div>
+<script>
+    var app=angular.module('myApp', []);
+    app.controller('mycontroler1',function($scope,$rootScope)
+    {
+        $scope.a=function(evt)
+        {
+            $rootScope.$broadcast('senddown','Hello')
+        }
+        $scope.$on('senddown', function(evt,data)
+        {
+            $scope.msg="mycontroler1" +data;
+        });
+        });
+         app.controller('mycontroler2',function($scope,$rootScope)
+         {
+            $scope.$on('senddown', function(evt,data)
+                {
+                    $scope.msg="mycontroler2"+data;
+                
+                });
+
+    });
+   
+</script>
+</center>
+</body>
+
+</html>

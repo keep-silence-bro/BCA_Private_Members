@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filter</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app bgcolor="skyblue">
+<p ng-init="a=['BCA','Mcom','MCA','BCS']">
+	<p ng-repeat="x in a|filter:'B'">
+	<p ng-repeat="x in a|filter:'M'">
+	
+		{{ x }}
+		{{ x }}
+	</p>
+</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filter</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app="myapp" bgcolor="skyblue">
+	<p ng-init="str='HELLO'">
+		{{ str | bca }}
+	</p>
+	<script >
+	var app=angular.module('myapp',[]);
+	app.filter('bca', function(){
+
+return function(item)
+{
+	return item.toLowerCase();
+}
+	});</script>
+
+
+
+</body>
+</html>

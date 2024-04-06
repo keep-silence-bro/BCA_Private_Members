@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SCOPE INHERITANCE prgm</title>
+</head>
+<script src="D:\angular.min.js"></script>
+<script>
+	var app=angular.module('studentApp', []);
+	app.controller('studentOne',function($scope){
+		$scope.name="John";
+		$scope.grade="A";
+	});
+
+	app.controller('studentTwo',function($scope){
+		$scope.name="jay";
+	
+	});
+	app.controller('studentThree',function($scope){
+		$scope.name="Ram";
+		$scope.grade="B";
+	});
+</script>
+<body ng-app="studentApp" bgcolor="skyblue">
+	<div ng-controller="studentOne">
+		<p> {{ name}}<br/>
+			
+		   {{ grade}}</p>
+
+		<div ng-controller="studentTwo">
+		<p> {{ name}}  <br/>
+	 {{ grade}}</p>
+
+		<div ng-controller="studentThree">
+		<p> {{ name}}  <br/> {{ grade}}</p>
+		
+	</div>
+	
+
+
+</body>
+</html>

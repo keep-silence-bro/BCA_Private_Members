@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Controller attached nproperty</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<!- Create a view in angular JS-->
+<body ng-app="myApp" bgcolor="skyblue">
+	<!--hoe to create Controller-->
+	<div ng-controller="mycontroller">
+		{{ message }}  {{ name}}
+		
+	</div>
+		
+		<script>
+			<!-- create a controller-->
+			var app=angular.module('myApp', []);
+			app.controller('mycontroller',  function($scope){
+				$scope.message="Hello All";
+				$scope.name="John";
+				
+			});
+		</script>
+	
+
+
+
+
+</body>
+</html>

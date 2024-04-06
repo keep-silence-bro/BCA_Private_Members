@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="D:\angular.min.js"></script>
+</head>
+<body>
+	<div ng-app>
+
+		<p> Enter your name :</p>
+		<form name="form">
+		<input type="text" name="Myinput" ng-model="Myinput" required>
+	</form>
+	<h2> Validation step is : {{ form.Myinput.$valid }}</h2>
+
+
+		
+	</div>
+
+</body>
+</html>

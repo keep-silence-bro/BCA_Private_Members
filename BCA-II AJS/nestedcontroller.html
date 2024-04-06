@@ -1,0 +1,33 @@
+
+<html>
+<head>
+	<title> Controller Nested</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" bgcolor="skyblue">
+	
+	<div ng-controller="bca">
+		
+		{{ str1 }}
+	</div>
+	<div ng-controller="mca">
+		{{ str2 }}
+	
+		<script>
+			
+			var app=angular.module('myApp', []);
+			app.controller('bca',  function($scope){
+				$scope.str1="THE BCA 2 CLASS";
+				
+			});
+			app.controller('mca',function($scope){
+              
+               $scope.str2="THE MCA class";
+			});
+		</script>
+	
+
+
+</body>
+</html>

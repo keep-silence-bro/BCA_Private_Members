@@ -1,0 +1,29 @@
+----------------------<!DOCTYPE html>
+<html>
+<head>
+	<title> Controller object</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<!- Create a view in angular JS-->
+<body ng-app="myApp" bgcolor="skyblue">
+	
+	<div ng-controller="mycontroller">
+		First name={{student.Fname}}<br>
+		Last name={{student.Lname}}<br>
+		Age={{student.Age}}	</div>
+		
+		<script>
+			<!-- create a controller-->
+			var app=angular.module('myApp', []);
+			app.controller('mycontroller',  function($scope){
+				$scope.student={ Fname:'Shradha',Lname:'Kakade', Age:20};
+				
+			});
+		</script>
+	
+
+
+
+
+</body>
+</html>

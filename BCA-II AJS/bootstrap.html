@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<script src="D:\angular.min.js"></script>
+<body ng-app="myApp" bgcolor="yellow">
+	<div ng-controller="welcomectrl">
+		{{ greeting }}
+	</div>
+<script>
+	var app=angular.module('myApp',[]);
+	app.controller('welcomectrl',function($scope){
+		$scope.greeting="Welcome to BCA STUDENTS";
+
+	});
+	angular.bootstrap(element,['demo']);
+
+</script>
+
+
+
+</body>
+</html>

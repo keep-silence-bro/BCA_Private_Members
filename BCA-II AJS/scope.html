@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>module</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app="myApp" bgcolor="pink"> 
+	<p ng-controller="myctrla2">
+	{{ str}}<br>
+		{{ msg}}<br>
+		{{ msg1}}<br>
+</p>
+<p ng-controller="myctrl1">
+	{{ str}}<br>
+	{{ msg }}<br>
+	{{ msg1 }}<br>
+</p>
+<script>
+	 var app=angular.module('myApp', []);
+	 app.controller('myctrl1',function($rootScope){
+	 	$rootScope.str="BCA1 class";
+	 });
+	 
+
+
+
+	 app.controller('myctrl2',function($scope){
+	 	$scope.msg="Good morning all";
+
+	 	$scope.msg1=" all";
+	 });
+</script>
+</body>
+</html>

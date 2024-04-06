@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>$apply() Function in AngularJs</title>
+
+<script src="D:\angular.min.js"></script>
+
+</script>
+</head>
+
+<body>
+<div ng-app="myApp">
+<h2> scpoe and directive in AngularJs</h2>
+<p ng-bca></p>
+
+<script>
+    var app=angular.module('myApp', [])
+    .directive('ngBca',function(){
+        return{
+            restrict:"A",
+            template:"BCA Hello"
+        };
+    });
+    
+</script>
+</body>
+
+</html>

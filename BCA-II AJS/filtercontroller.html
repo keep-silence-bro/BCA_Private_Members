@@ -1,0 +1,22 @@
+
+<html>
+<head>
+	<title> Controller Nested</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" bgcolor="skyblue">
+	
+		<div ng-controller="demo">
+		{{ str|uppercase }}
+	
+	<script>
+		var app=angular.module('myApp', []);
+			app.controller('demo',  function($scope){
+				$scope.str=" hello all";
+				
+			});
+	</script>
+
+</body>
+</html>

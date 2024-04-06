@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>$apply() Function in AngularJs</title>
+
+<script src="D:\angular.min.js"></script>
+<script>
+var app = angular.module("applyApp", []);
+app.controller("applyCtrl", function ($scope) {
+            $scope.currentName = "John";
+            $scope.updatedName = function () {
+                $scope.currentName = "Chris";
+            };
+
+            // Event listener added
+var event = document.getElementById("btnapply");
+event.addEventListener("click", function () {
+                $scope.$apply(() => {
+
+                    // To update name on rootScope
+                    // forcefully, use $apply function
+                    $scope.currentName = "Virat";
+                });
+            });
+        });
+</script>
+</head>
+
+<body>
+<div ng-app="applyApp" ng-controller="applyCtrl">
+<h2>$apply() Function in AngularJs</h2>
+<input type="button" 
+value="Click to Update Name" 
+ng-click="updatedName()" />
+
+<input type="button" 
+value="Click to Update Name forcefully." 
+id="btnapply" />
+
+<span style="color: Red">{{ currentName }}</span>
+</div>
+</body>
+
+</html>

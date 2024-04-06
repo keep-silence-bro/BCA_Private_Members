@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Two way binding</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app="myApp" bgcolor="pink"> 
+	<input type="text" ng-model="a">
+	{{ a }}
+	<P ng-controller="c">
+		{{ msg }}
+	</P>
+	<script type="text/javascript">
+		var app=angular.module('myApp',[]);
+		app.controller('c',function($rootScope){
+			$rootScope.msg="Hello";
+		});
+	</script>
+
+
+</body>
+</html>

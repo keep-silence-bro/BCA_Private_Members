@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        transition: all linear 0.5s;
+        transform: rotateX(180deg);
+    }
+    .ng-hide{
+        height: 0px;
+        width: 0px;
+    }
+</style>
+<script src="angular.min.js"></script>
+<script src="animate.js"></script>
+<body ng-app="ngAnimate">
+    <input type="checkbox" ng-model="a">
+    <div ng-hide="a">
+        Welcome
+    </div>
+    
+</body>
+</html>

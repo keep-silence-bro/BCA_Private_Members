@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Controller</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app="myApp" bgcolor="skyblue">
+	<div ng-controller="mycontroller">
+		{{ str }}
+		
+	</div>
+		
+		<script>
+			var app=angular.module('myApp', []);
+			app.controller('mycontroller',  function($scope){
+				$scope.str="Hello All";
+				
+			});
+		</script>
+	
+
+
+
+
+</body>
+</html>

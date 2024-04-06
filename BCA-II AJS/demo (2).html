@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+</head>
+<body>
+
+<div ng-view></div>
+
+<script src="app.js"></script>
+
+
+<script>
+var app = angular.module('myApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+  $routeProvider
+
+  .when('/', {
+templateUrl :'pages/home.html',
+controller  :'HomeController'
+  })
+
+  .when('/blog', {
+templateUrl :'pages/blog.html',
+controller  :'BlogController'
+  })
+
+  .when('/about', {
+templateUrl :'pages/about.html',
+controller  :'AboutController'
+  })
+
+  .otherwise({redirectTo: '/'});
+});
+
+
+
+
+app.controller('HomeController', function($scope) {
+  $scope.message = 'Hello from HomeController';
+});
+
+app.controller('BlogController', function($scope) {
+  $scope.message = 'Hello from BlogController';
+});
+
+app.controller('AboutController', function($scope) {
+    $scope.message = 'Hello from AboutController';
+});
+</script>
+</body>
+</html>

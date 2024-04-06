@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filter</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app bgcolor="skyblue">
+<p ng-init="fruit=[{name:'apple',color:'red'},{name:'orange',color:'orange'},{name:'Mango',color:'yellow'}]">
+	<p ng-repeat="x in fruit| orderBy:'name'">
+		Fruit is={{ x.name }}<br>
+		Color is={{ x.color }}
+	</p>
+</p>
+</body>
+</html>

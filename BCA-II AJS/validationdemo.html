@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="D:\angular.min.js"></script>
+</head>
+<body bgcolor="skyblue">
+	<div ng-app>
+		<form name="myfrm">
+			Name:<input type="text" name="name" ng-model="name"><br>
+
+			Email:<input type="email" name="email" ng-model="email"><br>
+
+			<input type="submit" value="submit">
+
+			<p ng-show="myfrm.name.$valid"></p>
+			<p ng-show="myfrm.email.$valid"></p>
+
+		</form>
+		<h3> validation state is :</h3>
+		<ol>
+			<li> name:{{ myfrm.name.$valid }}</li>
+			<li> name:{{ myfrm.email.$valid }}</li>
+		</ol>
+		
+
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Radio Button</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body>
+	<div ng-app>
+		<form>
+			Male :<input type="radio" ng-model="gender" value="male" name="gender">
+
+			Female :<input type="radio" ng-model="gender" value="female" name="gender">
+
+			Other :<input type="radio" ng-model="gender" value="Other" name="gender">
+		</form>
+		<h2>
+			YOU ARE :{{ gender }}
+		</h2>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Watch</title>
+	<script src="D:\angular.min.js"></script>
+</head>
+<body ng-app="myApp" bgcolor="pink"> 
+	<div ng-controller="c">
+		{{ newValue }}<br>
+		{{ oldValue}}
+	<script>
+		var app=angular.module('myApp',[]);
+		app.controller('c',function($scope){
+			$scope.msg="Hello";
+
+
+			$scope.$watch('msg', function(newValue, oldValue) {
+				$scope.newValue=newValue;
+				$scope.oldValue=oldValue;
+				
+			});
+			});
+	
+	</script>
+
+
+</body>
+</html>

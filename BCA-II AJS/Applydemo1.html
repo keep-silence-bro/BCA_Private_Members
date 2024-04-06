@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>$apply() Function in AngularJs</title>
+
+<script src="D:\angular.min.js"></script>
+
+</script>
+</head>
+
+<body>
+<div ng-app="applyApp" ng-controller="applyCtrl">
+<h2>$apply() Function in AngularJs</h2>
+<p> output: {{ a }}
+{{ b }}
+</p>
+<script>
+    var app=angular.module('applyApp', []);
+    app.controller('applyCtrl',function($scope,$rootScope){
+        $scope.a="BCA class";
+        $rootScope.b="BCA Depatment";
+        setTimeout(function(){
+          $scope.a="BCS class";
+        $rootScope.b="BCS Depatment"; 
+        $scope.$apply()   
+        },3000);
+    });
+</script>
+</body>
+
+</html>
