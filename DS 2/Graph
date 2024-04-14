@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<conio.h>
+int n,m,i,j;
+void Undirectedadjmatrix(int adj[][6],int arr[][2])
+{
+	for(i=0;i<6;i++)
+	{
+		for(j=0;j<6;j++)
+		{
+			adj[i][j]=0;
+		}
+	}
+		for(i=0;i<m;i++)
+		{
+			int x=arr[i][0];
+			int y=arr[i][1];
+			adj[x][y]=1;
+			adj[y][x]=1;
+		}
+}
+void Directedadjmatrix(int adj[][6],int arr[][2])
+{
+	for(i=0;i<6;i++)
+	{
+		for(j=0;j<6;j++)
+		{
+			adj[i][j]=0;
+		}
+	}
+		for(i=0;i<m;i++)
+		{
+			int x=arr[i][0];
+			int y=arr[i][1];
+			adj[x][y]=1;
+			//adj[y][x]=1;
+		}
+}
+
+void printadjmatrix(int adj[][6])
+{
+	for(i=1;i<6;i++)
+	{
+		for(j=1;j<6;j++)
+		{
+			printf("%d",adj[i][j]);
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+int n=5,adj[5][5],ch;
+int arr[4][2]={
+		{1,2},{2,3},{4,5},{1,5}
+		};
+
+clrscr();
+m=sizeof(arr)/sizeof(arr[0]);
+printf("1.Undirected graph\n2.Directed graph\n3.Exit");
+printf("Enter your choice");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:
+Undirectedadjmatrix(adj,arr);
+printadjmatrix(adj);
+break;
+case 2:
+Directedadjmatrix(adj,arr);
+printadjmatrix(adj);
+break;
+case 3:exit();
+break;
+default:printf("Wrong choice");
+}
+getch();
+}
