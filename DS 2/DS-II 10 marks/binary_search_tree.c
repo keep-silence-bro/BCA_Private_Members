@@ -6,10 +6,10 @@ struct node
     struct node *left;
     struct node *right;
 };
-struct node *root = NULL;
-struct node *create_node(int);
+struct node * root = NULL;
+struct node * create_node(int);
 void insert(int);
-struct node *delete (struct node *, int);
+struct node * delete (struct node *, int);
 void degree(int);
 int search(int);
 void odd_nodes(struct node *);
