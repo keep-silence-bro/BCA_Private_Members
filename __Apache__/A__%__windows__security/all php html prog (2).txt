@@ -1,0 +1,157 @@
+<html>
+<body>
+<form action="two.php">
+<b>Enter some number</b><br>
+<input type="text"name="text1"><br>
+<input type="submit"value="sqaure">
+</form>
+</body>
+</html>
+
+
+
+<html>
+<body>
+<form action="four.php" method="POST">
+<b>E
+</html>nter any number</b><br>
+<input type="text"name="text1"><br>
+<input type="submit"value="sqaure">
+</form>
+</body>
+
+
+<html>
+<body>
+<form action="six.php"method="POST">
+<b>Enter some number</b><br>
+<input type="text"name="text2"><br>
+<input type="submit"value="sqaure">
+</form>
+</body>
+</html>
+
+
+<html>
+<body>
+<form action="demo.php">
+<input type="hidden"name="text2"value="3"><br>
+<input type="submit"value="show">
+</form>
+</body>
+</html>
+
+
+<html>
+<body>
+<form action="nxt.php"method="POST">
+<b>username</b><input type="text"name="text1"><br>
+<b>password</b><input type="password"name="text2"><br>
+<input type="submit"value="sqaure">
+</form>
+</body>
+</html>
+
+
+<html>
+<body>
+	<?php
+<form action="nxt.php">
+<b>Enter hobby</b><br>
+<select name="text1">
+	<option value="reading">Reading</option>
+	<option value="playing">playing</option>
+</select>
+<input type="submit"value="go to next">
+?>
+</form>
+</body>
+</html>
+
+
+<html>
+<body>
+	<form action="next.php" onsubmit="return validate()">
+		<b>username</b><input type="text"name="text1"><br>
+		<b>age</b>
+		<input type="text"name="text2"><br>
+		<input type="submit"value=" next">
+	<p id="a"></p>
+	<p id="b"></p>
+	<head>
+		<script type="text/javascript">
+			function validate()
+			{
+				var x=document.forms[0].element[0].value;
+				if(x==NULL||x=="")
+				{
+					document.getElementById('a').innerHTML="<font color=red>fill this field";
+					return false;
+				}
+				var y=document.forms[0].element[0].value;
+				if(y==NULL||y=="")
+				{
+					document.getElementById('b').innerHTML="<font color=red>fill this field";
+					return false;
+				}
+				return true;
+			}
+
+		</script>
+	</head>
+</body>
+</html>
+
+<html>
+<body>
+	<head>
+	<script type="text/javascript">
+		function validate()
+		{
+			var x=document.forms[0].element[0].value;
+			if(isNaN(x))
+			{
+				document.getElementById('a').innerHTML="<font color =red> fill this field";
+				return false;
+			}
+			return true;
+		}
+
+	</script>
+</head>
+</body>
+</html>
+
+<html>
+<body>
+	<form action="next.php"onsubmit="return validate()">
+		age<input type="text"name="text1"><br>
+		<p id="a"></p>
+		<input type="submit"value=" save">
+	</form>
+</body>
+</html>
+
+
+
+<html>
+<body>
+<form action="next.php">
+<b>Enter  name</b><br>
+<input type="text"name="text1"><br>
+<input type="submit"value="sqaure">
+</form>
+</body>
+</html>
+next.php
+<?php
+$a=$_GET["text1"];
+if(isset($a))
+{
+	echo $a;
+}
+else
+{
+	echo "enter valid input";
+}
+?>

@@ -1,0 +1,97 @@
+-------------------c++ internal questions---------------------
+write a program for friend class and friend function of another class.
+write a program for scope resolution operator.
+write a program for constructor and destructor.
+write a program which demonstrate the use of arithmetic operator.
+-------------------java internal questions--------------------
+write  a program to check number is perfect or not.
+write a program for default and parametrised constructor in java.
+write a program for various datatype in java.
+write a program for single and multilevel inheritance in java.
+----------------DS-I internal questions--------------------
+write a program for circular queue.
+write a program for simple linked list with insertion from beginning of the list and delete operation.
+write a program for stack using array.
+write a program for recurssion .
+------------------DS-II internal questions------------------
+write a program to implement search operation of BST.
+write a menu driven code for bubble sort and selection sort.
+write a program to perform linear search.
+write a program for index sequential search.
+------------------MYSQL internal questions----------------
+add the following field to the table employee 
+id add primary key
+name not null
+age 
+adderess
+salary 
+phone_no
+insert 7 records 
+perform following operation
+-to display list of emp whose age is below 25 years old.
+-to display list of names and respective salary in desc order of salary.
+-to display all emp names whose name contains the character A anywhere.
+-to list out all emp names whose phone no start with 99.
+
+create table store add following field
+id 
+name 
+location 
+city
+no of emp
+date of opened 
+sales amount
+insert 5 records
+perform following operation
+-to display store name ,loc and data opened of stores that where opened before 1 march 2016.
+-to display total sales amount of each city along with city name
+-select distinct city
+-to display names of stores along with sales amount of those that have fashion anywhere in their in store name.
+
+create table coach
+p_coach 
+name 
+city
+insert 5 records
+-update city name to pune where name is abc.
+-display city in asc order.
+
+create table student
+name 
+no
+marks
+insert 5 records
+-display avg of marks
+-display max and min of marks
+------------------DBMS-----------
+draw ER diagram for  retail management sysytem
+draw ERD for online purchase management system
+table bus details having arrival time ,b_no,b_name,designation,
+perform following query
+-display b_no 1027 and 2397
+-display b_name having arrival time is 10:35
+-display the b_no having arrival time and designation
+
+------------------STQA internal questions----------------
+write  a test cases for cab booking system in stqa.
+write  a test cases for pencil in stqa.
+write a positive test case for login form
+write a test case for google search engine
+----------------XML-------------------
+write a xml script for internal DTD.
+write a xml script for mark sheet and apply css to the document.
+write any namespace program for script
+write xml program for attribute
+----------------PHP internal questions----------
+write a program to print array element 
+write a program for multilevel inheritance in php
+write a program for constructor and destructor in php
+write a program for user defined function 
+----------------------AJS internal questions---------------
+write a AJS program for keyboard event.
+write a AJS program which demonstrate the use of JSON function
+write AJS program for expression 
+string 
+number
+write AJS for ng-cut ng-copy and ng-paste.
+
